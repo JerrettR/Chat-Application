@@ -13,7 +13,7 @@ import os
 
 try:
     # Create web server certificate
-    os.chdir("..")
+    os.chdir("/home/mininet")
     os.chdir("/etc/ssl/demoCA")
     os.system("sudo openssl genrsa -out webpa4.test-key.pem 2048")
     common_name = input("Enter the common name for the web server: ")
@@ -27,7 +27,7 @@ except Exception as e:
 
 try:
     # Create chat server certificate
-    os.chdir("..")
+    os.chdir("/home/mininet")
     os.chdir("/etc/ssl/demoCA")
     os.system("sudo openssl genrsa -out chatpa4.test-key.pem 2048")
     common_name = input("Enter the common name for the chat server: ")
